@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/ic_food_joke_background"
-    tools:context=".ui.fragments.foodjoke.FoodJokeFragment">
+    tools:context=".presentation.fragments.foodjoke.FoodJokeFragment">
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/food_joke_cardView"

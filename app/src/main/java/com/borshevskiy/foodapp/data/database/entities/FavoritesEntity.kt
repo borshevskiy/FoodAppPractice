@@ -2,12 +2,11 @@ package com.borshevskiy.foodapp.data.database.entities
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import com.borshevskiy.foodapp.models.Result
-import com.borshevskiy.foodapp.util.Constants.Companion.FAVORITE_RECIPES_TABLE
+import com.borshevskiy.foodapp.domain.models.Food
 
-@Entity(tableName = FAVORITE_RECIPES_TABLE)
+@Entity(tableName = "favorite_recipes_table")
 class FavoritesEntity(
     @PrimaryKey(autoGenerate = true)
     var id: Int,
-    var result: Result
+    var food: Food
 )

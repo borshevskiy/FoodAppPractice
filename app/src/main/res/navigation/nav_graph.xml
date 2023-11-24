@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/recipesFragment"
-        android:name="com.borshevskiy.foodapp.ui.fragments.recipes.RecipesFragment"
+        android:name="com.borshevskiy.foodapp.presentation.fragments.recipes.RecipesFragment"
         android:label="Recipes"
         tools:layout="@layout/fragment_recipes" >
         <action
@@ -23,7 +23,7 @@
     </fragment>
     <fragment
         android:id="@+id/favouriteRecipesFragment"
-        android:name="com.borshevskiy.foodapp.ui.fragments.favorites.FavouriteRecipesFragment"
+        android:name="com.borshevskiy.foodapp.presentation.fragments.favorites.FavouriteRecipesFragment"
         android:label="Favourites"
         tools:layout="@layout/fragment_favourite_recipes" >
         <action
@@ -32,12 +32,12 @@
     </fragment>
     <fragment
         android:id="@+id/foodJokeFragment"
-        android:name="com.borshevskiy.foodapp.ui.fragments.foodjoke.FoodJokeFragment"
+        android:name="com.borshevskiy.foodapp.presentation.fragments.foodjoke.FoodJokeFragment"
         android:label="Food Joke"
         tools:layout="@layout/fragment_food_joke" />
     <dialog
         android:id="@+id/recipesBottomSheet"
-        android:name="com.borshevskiy.foodapp.ui.fragments.recipes.bottomsheet.RecipesBottomSheet"
+        android:name="com.borshevskiy.foodapp.presentation.fragments.recipes.bottomsheet.RecipesBottomSheet"
         android:label="recipes_bottom_sheet"
         tools:layout="@layout/recipes_bottom_sheet" >
         <action
@@ -46,11 +46,11 @@
     </dialog>
     <activity
         android:id="@+id/detailsActivity"
-        android:name="com.borshevskiy.foodapp.ui.DetailsActivity"
+        android:name="com.borshevskiy.foodapp.presentation.activity.DetailsActivity"
         android:label="Details"
         tools:layout="@layout/activity_details" >
         <argument
             android:name="result"
-            app:argType="com.borshevskiy.foodapp.models.Result" />
+            app:argType="com.borshevskiy.foodapp.domain.models.Food" />
     </activity>
 </navigation>

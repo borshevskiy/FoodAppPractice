@@ -16,13 +16,13 @@
         android:theme="@style/SplashScreenStyle"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".ui.DetailsActivity"
+            android:name=".presentation.activity.DetailsActivity"
             android:label="Details"
             android:screenOrientation="fullSensor"
             android:theme="@style/DetailsActivityStyle"
             android:exported="true" />
         <activity
-            android:name=".ui.MainActivity"
+            android:name=".presentation.activity.MainActivity"
             android:screenOrientation="fullSensor"
             android:exported="true">
             <intent-filter>

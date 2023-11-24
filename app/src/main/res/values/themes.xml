@@ -11,12 +11,6 @@
         <item name="bottomNavigationStyle">@style/CustomBottomNavigationView</item>
     </style>
 
-    <style name="SplashScreenStyle" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <item name="android:windowBackground">@drawable/splash_screen</item>
-        <item name="android:windowTranslucentStatus">true</item>
-        <item name="android:windowTranslucentNavigation">true</item>
-    </style>
-
     <style name="CustomActionBarStyle" parent="Widget.MaterialComponents.ActionBar.Primary">
         <item name="background">@color/actionBarBackgroundColor</item>
     </style>

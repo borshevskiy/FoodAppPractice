@@ -1,6 +1,6 @@
 package com.borshevskiy.foodapp.di
 
-import com.borshevskiy.foodapp.util.Constants.Companion.BASE_URL
+import com.borshevskiy.foodapp.BuildConfig
 import com.borshevskiy.foodapp.data.network.FoodRecipesApi
 import dagger.Module
 import dagger.Provides
@@ -25,20 +25,7 @@ object NetworkModule {
 
     @Singleton
     @Provides
-    fun provideConverterFactory(): GsonConverterFactory {
-        return GsonConverterFactory.create()
-    }
-
-    @Singleton
-    @Provides
-    fun provideRetrofitInstance(okHttpClient: OkHttpClient, gsonConverterFactory: GsonConverterFactory): Retrofit {
-        return Retrofit.Builder().baseUrl(BASE_URL)
-            .client(okHttpClient).addConverterFactory(gsonConverterFactory).build()
-    }
-
-    @Singleton
-    @Provides
-    fun provideApiService(retrofit: Retrofit): FoodRecipesApi {
-        return retrofit.create(FoodRecipesApi::class.java)
-    }
+    fun provideApiService(okHttpClient: OkHttpClient): FoodRecipesApi = Retrofit.Builder()
+        .baseUrl(BuildConfig.BASE_URL).client(okHttpClient).addConverterFactory(GsonConverterFactory.create())
+        .build().create(FoodRecipesApi::class.java)
 }

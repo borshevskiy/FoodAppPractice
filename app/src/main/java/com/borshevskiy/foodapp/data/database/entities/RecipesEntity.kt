@@ -2,13 +2,10 @@ package com.borshevskiy.foodapp.data.database.entities
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import com.borshevskiy.foodapp.models.FoodRecipe
-import com.borshevskiy.foodapp.util.Constants.Companion.RECIPES_TABLE
+import com.borshevskiy.foodapp.domain.models.FoodData
 
-@Entity(tableName = RECIPES_TABLE)
-class RecipesEntity(
-    var foodRecipe: FoodRecipe
-) {
+@Entity(tableName = "recipes_table")
+class RecipesEntity(var foodData: FoodData) {
     @PrimaryKey(autoGenerate = false)
     var id: Int = 0
 }
